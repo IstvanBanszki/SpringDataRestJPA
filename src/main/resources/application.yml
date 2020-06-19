@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:bookshelddb
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+  data:
+    rest:
+      basePath: /api
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+server:
+  port: 8080
