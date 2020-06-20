@@ -21,7 +21,7 @@ import javax.persistence.Table;
 public class Shelf {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
 
     @OneToOne(fetch = FetchType.EAGER)

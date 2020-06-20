@@ -1,4 +1,4 @@
-# SpringDateRestJPA
+# SpringDataRestJPA
 
 ### Requirements
 

@@ -9,6 +9,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 import java.io.Serializable;
 
 @Data
@@ -19,9 +20,15 @@ import java.io.Serializable;
 public class Author implements Serializable {
 
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
+
+    @NotBlank(message = "First Name is mandatory")
     private String firstName;
+
+    @NotBlank(message = "Last Name is mandatory")
     private String lastName;
+
+    @NotBlank(message = "Nationality is mandatory")
     private String nationality;
 }
